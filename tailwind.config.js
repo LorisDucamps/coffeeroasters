@@ -13,6 +13,10 @@ module.exports = {
         fraunces: ['fraunces', ...fontFamily.sans],
       },
     },
+    screens: {
+      tablet: "481px",
+      desktop: "769px",
+    },
     colors: {
       'white': '#FFFFFF',
       'dark-cyan' : '#0E8784',

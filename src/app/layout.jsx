@@ -1,8 +1,7 @@
 import localFont from 'next/font/local';
-import Link from "next/link";
 import "./globals.css";
 import React from "react";
-import Image from "next/image";
+import Navbar from "@/app/components/Navbar";
 
 export const metadata = {
     title: "CoffeeRoasters",
@@ -41,25 +40,7 @@ export default function RootLayout({children}) {
         <html lang="fr" className={`${barlow.variable} ${fraunces.variable}`}>
         <body className="antialiased font-barlow">
         <div className="max-w-[1280px] mx-auto">
-            <Image
-                src="/profile.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-            />
-            <nav>
-                <ul className="flex items-center gap-4">
-                    <li>
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/about-us">About us</Link>
-                    </li>
-                    <li>
-                        <Link href="/create-your-plan"> Create your plan</Link>
-                    </li>
-                </ul>
-            </nav>
+            <Navbar />
             {children}
 
         </div>
