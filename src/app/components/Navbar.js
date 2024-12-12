@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,42 +16,46 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <header className="flex items-center justify-between mt-8 mb-10">
-      <div className="text-lg font-bold">
-        <Link href="/">
-          <img
-            src="/logos/logo-header-coffeeroasters.svg"
-            alt="Logo Coffeeroasters"
-            className="w-[163px] h-[18px] tablet:w-[236px] tablet:h-[26px]"
-          />
-        </Link>
-      </div>
-
+    <>
       {/* Desktop Navigation */}
-      <nav className="hidden space-x-4 tablet:flex">
-        <Link href="/" className="hover:text-gray-400">
+      <nav
+        aria-label="Navigation principale"
+        className="hidden space-x-8 tablet:flex"
+      >
+        <Link
+          href="/"
+          className="text-xs font-bold uppercase text-grey font-barlow tracking-[.92px] hover:text-dark-grey-blue"
+        >
           Home
         </Link>
-        <Link href="/about-us" className="hover:text-gray-400 ">
+        <Link
+          href="/about-us"
+          className="text-xs font-bold uppercase text-grey font-barlow tracking-[.92px] hover:text-dark-grey-blue"
+        >
           About us
         </Link>
-        <Link href="/create-your-plan" className="hover:text-gray-400 ">
+        <Link
+          href="/create-your-plan"
+          className="text-xs font-bold uppercase text-grey font-barlow tracking-[.92px] hover:text-dark-grey-blue"
+        >
           Create your plan
         </Link>
       </nav>
 
-      {/* Mobile Menu Icon */}
+      {/* Mobile Menu Button */}
       <button
-        className="z-20 tablet:hidden focus:outline-none"
+        className="tablet:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-controls="mobile-menu"
+        aria-expanded={isMenuOpen}
         aria-label="Toggle Menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-white"
+          className="w-6 h-6 text-black"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="#000000"
+          stroke="currentColor"
         >
           <path
             strokeLinecap="round"
@@ -62,47 +66,47 @@ export default function Navbar() {
         </svg>
       </button>
 
-      {/* Mobile Navigation with Gradient */}
+      {/* Mobile Navigation */}
+      {/* Utilisation d'un wrapper fixe pour le menu plein écran */}
       <div
-        className={`tablet:hidden w-full h-full transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'fixed top-[90] left-0 right-0 z-10' : 'hidden'
-        }`}
+        id="mobile-menu"
+        className={`
+          tablet:hidden fixed top-[88] left-0 right-0 z-10
+          transition-opacity duration-300 ease-in-out h-full
+          ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+        `}
+        style={{
+          background:
+            'linear-gradient(180deg, #FEFCF7 50%, rgba(254, 252, 247, 0) 100%)',
+        }}
       >
         <nav
-          className="block h-full pt-10"
-          style={{
-            background:
-              'linear-gradient(180deg, #FEFCF7 50%, rgba(254, 252, 247, 0) 100%)',
-          }}
+          aria-label="Navigation principale mobile"
+          className="flex flex-col items-center h-full pt-10 space-y-8"
         >
-          <ul className="space-y-8">
-            <li>
-              <Link
-                href="/"
-                className="block text-2xl text-center font-fraunces text-dark-grey-blue"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about-us"
-                className="block text-2xl text-center font-fraunces text-dark-grey-blue"
-              >
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/create-your-plan"
-                className="block text-2xl text-center font-fraunces text-dark-grey-blue"
-              >
-                Create your plan
-              </Link>
-            </li>
-          </ul>
+          <Link
+            href="/"
+            className="text-2xl font-fraunces text-dark-grey-blue"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about-us"
+            className="text-2xl font-fraunces text-dark-grey-blue"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About us
+          </Link>
+          <Link
+            href="/create-your-plan"
+            className="text-2xl font-fraunces text-dark-grey-blue"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Create your plan
+          </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
