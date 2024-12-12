@@ -39,12 +39,12 @@ export default function RootLayout({children}) {
     return (
         <html lang="fr" className={`${barlow.variable} ${fraunces.variable}`}>
         <body className="antialiased font-barlow">
-        <div className="max-w-[1280px] mx-auto">
+        <div className="px-6">
             <Navbar />
-            {children}
-
+            <main>
+                {children}
+            </main>
         </div>
-
         </body>
         </html>
     );
