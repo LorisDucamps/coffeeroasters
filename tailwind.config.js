@@ -12,6 +12,7 @@ module.exports = {
         barlow: ['barlow', ...fontFamily.sans],
         fraunces: ['fraunces', ...fontFamily.sans],
       },
+      textColor: ['hover'],
     },
     screens: {
       tablet: '481px',
