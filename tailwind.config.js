@@ -15,8 +15,8 @@ module.exports = {
       textColor: ['hover'],
     },
     screens: {
-      tablet: '481px',
-      desktop: '769px',
+      tablet: '600px',
+      desktop: '980px',
     },
     colors: {
       white: '#FFFFFF',
