@@ -71,7 +71,7 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={`
-          tablet:hidden fixed top-[88] left-0 right-0 z-10
+          tablet:hidden fixed top-[88] left-0 right-0 z-20
           transition-opacity duration-300 ease-in-out h-full
           ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         `}
