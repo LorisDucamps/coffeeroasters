@@ -45,16 +45,18 @@ const Hero = () => {
           srcSet="/hero-home-desktop.jpg 1x, /hero-home-desktop@2x.jpg 2x"
         />
       </div>
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full px-6 text-center">
-        <h1 className="font-fraunces font-black text-white text-[40px] leading-[40px] tablet:text-[48px] tablet:leading-[48px] desktop:text-[72px] desktop:leading-[72px]">
-          Great coffee made simple.
-        </h1>
-        <p className="text-[15px] leading-[25px] text-light-cream opacity-80 mt-6 mb-9">
-          Start your mornings with the world’s best coffees. Try our expertly
-          curated artisan coffees from our best roasters delivered directly to
-          your door, at your schedule.
-        </p>
-        <Button>Create your plan</Button>
+      <div className="absolute inset-0 z-10 flex flex-col w-full px-6 place-content-center tablet:px-14 ">
+        <div className="w-full tablet:max-w-[398px] desktop:max-w-[494px]">
+          <h1 className="font-fraunces font-black text-white text-[40px] leading-[40px] text-center tablet:text-[48px] tablet:leading-[48px] tablet:text-left desktop:text-[72px] desktop:leading-[72px]">
+            Great coffee made simple.
+          </h1>
+          <p className="text-[15px] leading-[25px] text-light-cream opacity-80 mt-6 mb-9 text-center tablet:text-left desktop:mt-8 desktop:mb-14">
+            Start your mornings with the world’s best coffees. Try our expertly
+            curated artisan coffees from our best roasters delivered directly to
+            your door, at your schedule.
+          </p>
+          <Button className="block mx-auto tablet:m-0">Create your plan</Button>
+        </div>
       </div>
     </header>
   );
