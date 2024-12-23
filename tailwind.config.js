@@ -13,6 +13,9 @@ module.exports = {
         fraunces: ['fraunces', ...fontFamily.sans],
       },
       textColor: ['hover'],
+      backgroundImage: {
+        'text-gradient': 'linear-gradient(to bottom, #83888F, #FFFFFF)',
+      },
     },
     screens: {
       tablet: '600px',

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 
 const collectionsData = [
   {
@@ -39,7 +38,9 @@ const collectionsData = [
 const Collections = () => {
   return (
     <section aria-labelledby="collection-heading">
-      <h2>Our Collection</h2>
+      <h2 className="font-fraunces font-black text-[40px] leading-[72px] bg-text-gradient bg-clip-text text-fill-transparent">
+        Our collection
+      </h2>
       <div className="grid grid-cols-1 desktop:grid-cols-4">
         {collectionsData.map((item) => (
           <article key={item.id} className="tablet:flex desktop:block">
