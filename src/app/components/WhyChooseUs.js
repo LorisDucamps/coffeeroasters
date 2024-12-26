@@ -42,12 +42,14 @@ const WhyChooseUs = () => {
                 type={card.type}
                 className="w-[72px] h-full mx-auto text-pale-orange"
               />
-              <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-white text-center mb-6">
-                {card.title}
-              </h3>
-              <p className="text-[15px] leading-[25px] text-light-cream text-center px-5">
-                {card.text}
-              </p>
+              <div>
+                <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-white text-center mb-6">
+                  {card.title}
+                </h3>
+                <p className="text-[15px] leading-[25px] text-light-cream text-center px-5">
+                  {card.text}
+                </p>
+              </div>
             </div>
           ))}
         </>
