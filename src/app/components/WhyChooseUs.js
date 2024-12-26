@@ -31,24 +31,27 @@ const WhyChooseUs = () => {
         featured in our range. This means working closely with the best coffee
         growers to give you a more impactful experience on every level.
       </p>
-      <article className="grid grid-col-1 gap-6">
+      <article className="grid grid-col-1 gap-6 tablet:max-w-[573px]">
         <>
           {cards.map((card) => (
             <div
-              className="flex flex-col justify-between h-[382px] bg-dark-cyan rounded-lg px-3 pb-12"
+              className="flex flex-col justify-between h-[382px] bg-dark-cyan rounded-lg px-3 pb-12 tablet:flex-row tablet:h-[180px] tablet:pb-0 tablet:items-center tablet:gap-14"
               key={card.type}
             >
-              <Icons
-                type={card.type}
-                className="w-[72px] h-full mx-auto text-pale-orange"
-              />
               <div>
-                <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-white text-center mb-6">
-                  {card.title}
-                </h3>
-                <p className="text-[15px] leading-[25px] text-light-cream text-center px-5">
-                  {card.text}
-                </p>
+                <Icons
+                  type={card.type}
+                  className="w-[72px] h-full mx-auto text-pale-orange tablet:w-[56px]"
+                />
+
+                <div>
+                  <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-white text-center mb-6 tablet:mb-4 tablet:text-left">
+                    {card.title}
+                  </h3>
+                  <p className="text-[15px] leading-[25px] text-light-cream text-center px-5 tablet:text-left tablet:px-0">
+                    {card.text}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
