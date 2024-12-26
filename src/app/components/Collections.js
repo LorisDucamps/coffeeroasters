@@ -37,11 +37,11 @@ const collectionsData = [
 
 const Collections = () => {
   return (
-    <section aria-labelledby="collection-heading">
-      <h2 className="font-fraunces font-black text-[40px] leading-[72px] bg-text-gradient bg-clip-text text-fill-transparent">
-        Our collection
+    <section className="my-[120px]" aria-labelledby="collection-heading">
+      <h2 className="font-fraunces font-black text-[40px] leading-[72px] bg-text-gradient bg-clip-text text-fill-transparent text-center mb-[13px]">
+        our collection
       </h2>
-      <div className="grid grid-cols-1 desktop:grid-cols-4">
+      <div className="grid grid-cols-1 px-6 gap-12 desktop:grid-cols-4">
         {collectionsData.map((item) => (
           <article key={item.id} className="tablet:flex desktop:block">
             <figure>
@@ -51,12 +51,17 @@ const Collections = () => {
                 width={256}
                 height={194}
                 loading="lazy"
+                className="mx-auto max-w-[200px]"
               />
               <figcaption className="sr-only">{item.alt}</figcaption>
             </figure>
             <div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-center mt-6 mb-4">
+                {item.title}
+              </h3>
+              <p className="text-[15px] leading-[25px] text-center">
+                {item.description}
+              </p>
             </div>
           </article>
         ))}
