@@ -32,10 +32,10 @@ const WhyChooseUs = () => {
         featured in our range. This means working closely with the best coffee
         growers to give you a more impactful experience on every level.
       </p>
-      <article className="grid grid-cols-1 gap-6 tablet:max-w-[573px] tablet:mx-auto">
+      <article className="grid grid-cols-1 gap-6 tablet:max-w-[573px] tablet:mx-auto desktop:max-w-[1110px] desktop:grid-cols-3">
         {cards.map((card) => (
           <div
-            className="flex flex-col justify-between h-[382px] bg-dark-cyan rounded-lg px-6 pb-12 tablet:flex-row tablet:h-[180px] tablet:pb-0 tablet:items-center tablet:gap-14 tablet:pl-16 tablet:pr-12"
+            className="flex flex-col justify-between h-[382px] bg-dark-cyan rounded-lg px-6 pb-12 tablet:flex-row tablet:h-[180px] tablet:pb-0 tablet:items-center tablet:gap-14 tablet:pl-16 tablet:pr-12 desktop:flex-col desktop:h-full"
             key={card.type}
           >
             <Icons
