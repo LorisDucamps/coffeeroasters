@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className={`relative ${beforeStyles} px-6 mb-[120px] tablet:px-`}>
+    <section className={`relative ${beforeStyles} px-6 mb-[120px]`}>
       <h2 className="font-fraunces font-black text-[28px] leading-[28px] text-center text-white pt-16 pb-6 tablet:text-[32px] tablet:leading-[48px]">
         Why choose us?
       </h2>
