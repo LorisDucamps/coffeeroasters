@@ -1,7 +1,7 @@
 import Icons from './Icons';
 
 const beforeStyles =
-  "before:content-[''] before:bg-darked-grey-blue before:absolute before:inset-0 before:h-[902px] before:rounded-[10px] before:z-[-1] before:tablet:h-[573px]";
+  "before:content-[''] before:bg-darked-grey-blue before:absolute before:inset-0 before:h-[902px] before:rounded-[10px] before:z-[-1] before:tablet:h-[573px] before:desktop:h-[577px]";
 
 const WhyChooseUs = () => {
   const cards = [
@@ -35,18 +35,18 @@ const WhyChooseUs = () => {
       <article className="grid grid-cols-1 gap-6 tablet:max-w-[573px] tablet:mx-auto desktop:max-w-[1110px] desktop:grid-cols-3">
         {cards.map((card) => (
           <div
-            className="flex flex-col justify-between h-[382px] bg-dark-cyan rounded-lg px-6 pb-12 tablet:flex-row tablet:h-[180px] tablet:pb-0 tablet:items-center tablet:gap-14 tablet:pl-16 tablet:pr-12 desktop:flex-col desktop:h-full"
+            className="flex flex-col justify-between h-[382px] bg-dark-cyan rounded-lg px-6 pb-12 tablet:flex-row tablet:h-[180px] tablet:pb-0 tablet:items-center tablet:gap-14 tablet:pl-16 tablet:pr-12 desktop:flex-col desktop:h-[382px] desktop:px-12 desktop:pb-12 desktop:gap-0"
             key={card.type}
           >
             <Icons
               type={card.type}
-              className="w-[72px] h-full mx-auto text-pale-orange tablet:w-[56px] tablet:mx-0 tablet:shrink-0"
+              className="w-[72px] h-full mx-auto text-pale-orange tablet:w-[56px] tablet:mx-0 tablet:shrink-0 desktop:w-[72px] desktop:shrink"
             />
             <div>
-              <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-white text-center mb-6 tablet:mb-4 tablet:text-left">
+              <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-white text-center mb-6 tablet:mb-4 tablet:text-left desktop:text-center">
                 {card.title}
               </h3>
-              <p className="text-[15px] leading-[25px] text-light-cream text-center px-5 tablet:text-left tablet:px-0">
+              <p className="text-[15px] leading-[25px] text-light-cream text-center px-5 tablet:text-left tablet:px-0 desktop:text-center">
                 {card.text}
               </p>
             </div>
