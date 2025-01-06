@@ -12,7 +12,6 @@ module.exports = {
         barlow: ['barlow', ...fontFamily.sans],
         fraunces: ['fraunces', ...fontFamily.sans],
       },
-      textColor: ['hover'],
       backgroundImage: {
         'text-gradient': 'linear-gradient(to bottom, #83888F, #FFFFFF)',
       },
