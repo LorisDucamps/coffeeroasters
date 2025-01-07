@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const beforeStyles =
   "before:content-[''] before:bg-darked-grey-blue before:absolute before:top-[25%] before:left-0 before:right-0 before:h-[509px] before:rounded-[10px] before:z-[-1] before:tablet:h-[488px] before:desktop:h-[474px]";
 

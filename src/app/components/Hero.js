@@ -1,5 +1,5 @@
 import Button from './Button';
-import { Image } from 'next/image';
+import Image from 'next/image';
 
 const Hero = ({
   title = 'Great coffee made simple.',
