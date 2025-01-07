@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import OurCommitment from '../components/OurCommitment';
+import Uncompromising from '../components/Uncompromising';
 
 export default function page() {
   return (
@@ -15,6 +16,7 @@ export default function page() {
         }}
       />
       <OurCommitment />
+      <Uncompromising />
     </>
   );
 }
