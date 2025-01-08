@@ -6,8 +6,8 @@ const beforeStyles =
 const Uncompromising = () => {
   return (
     <section className={`relative ${beforeStyles} mb-[120px]`}>
-      <div className="grid grid-cols-1 desktop:grid-cols-2 gap-16 desktop:max-w-[1110px] desktop:mx-auto">
-        <picture className="relative w-full px-6 tablet:px-14 desktop:order-1">
+      <div className="grid grid-cols-1 desktop:grid-cols-2 gap-16 desktop:max-w-[1110px] desktop:mx-auto desktop:justify-between desktop:items-center">
+        <picture className="relative w-full px-6 tablet:px-14 desktop:order-1 desktop:px-0 desktop:max-w-[445px]">
           <source
             srcSet="/uncompromising-mobile.jpg 1x, /uncompromising-mobile@2x.jpg 2x"
             media="(max-width: 599px)"
@@ -29,7 +29,7 @@ const Uncompromising = () => {
             priority
           />
         </picture>
-        <div className="px-6 tablet:px-16">
+        <div className="px-6 tablet:px-16 desktop:px-0">
           <h3 className="font-fraunces font-black text-[28px] leading-[28px] text-center text-light-cream mb-6 tablet:text-center desktop:text-[40px] desktop:leading-[48px] desktop:text-left">
             Uncompromising quality
           </h3>
