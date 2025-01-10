@@ -1,3 +1,4 @@
+import HeadQuarters from '../components/HeadQuarters';
 import Hero from '../components/Hero';
 import OurCommitment from '../components/OurCommitment';
 import Uncompromising from '../components/Uncompromising';
@@ -17,6 +18,7 @@ export default function page() {
       />
       <OurCommitment />
       <Uncompromising />
+      <HeadQuarters />
     </>
   );
 }

@@ -29,7 +29,7 @@ const Uncompromising = () => {
             priority
           />
         </picture>
-        <div className="px-6 tablet:px-16 desktop:px-0">
+        <div className="px-6 tablet:px-16 desktop:px-0 desktop:mt-20">
           <h3 className="font-fraunces font-black text-[28px] leading-[28px] text-center text-light-cream mb-6 tablet:text-center desktop:text-[40px] desktop:leading-[48px] desktop:text-left">
             Uncompromising quality
           </h3>

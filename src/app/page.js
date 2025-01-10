@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <Collections />
       <WhyChooseUs />
-      <HowItWorks />
+      <HowItWorks variant="light" showTitle={true} showButton={true} />
     </>
   );
 }

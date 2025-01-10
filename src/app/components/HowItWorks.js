@@ -36,42 +36,83 @@ const steps = [
   },
 ];
 
-const HowItWorks = () => {
+const HowItWorks = ({ showTitle, showButton, variant = 'light' }) => {
+  const variants = {
+    light: {
+      container: {
+        padding: 'px-0',
+      },
+      background: {
+        backgroundColors: 'bg-transparent',
+      },
+      textColors: {
+        title: 'text-dark-grey-blue',
+        description: 'text-dark-grey-blue',
+      },
+    },
+    dark: {
+      container: {
+        padding: 'px-6',
+      },
+      background: {
+        backgroundColors: 'bg-darked-grey-blue',
+      },
+      textColors: {
+        title: 'text-white',
+        description: 'text-white',
+      },
+    },
+  };
+
+  const selectedVariant = variants[variant];
+
   return (
-    <section className="relative mb-[120px]">
-      <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-grey text-center mb-20 tablet:text-left tablet:mb-10 desktop:mb-20">
-        How it works
-      </h3>
-      <div className="grid grid-cols-1 gap-14 tablet:grid-cols-3 tablet:gap-8">
-        {steps.map((step, index) => (
-          <div key={index} className="relative text-center tablet:text-left">
-            <div className="hidden tablet:flex flex-col items-center tablet:items-start relative mb-6 tablet:mb-12 desktop:mb-16">
-              <div className="bg-light-cream h-[31px] w-[31px] border-2 border-dark-cyan rounded-full"></div>
-              {index < steps.length - 1 && (
-                <div className="absolute top-1/2 left-[31px] translate-y-[-50%] h-[2px] w-[100%] bg-pale-orange"></div>
-              )}
+    <section
+      className={`relative mb-[120px] ${selectedVariant.background.backgroundColors} rounded-xl my-[120px] tablet:my-[144px] desktop:my-[168px]`}
+    >
+      <div className="desktop:max-w-[1110px] desktop:mx-auto desktop:px-6 py-20 tablet:py-24">
+        {showTitle && (
+          <h3 className="font-fraunces font-black text-[24px] leading-[32px] text-grey text-center mb-20 tablet:text-left tablet:mb-10 desktop:mb-20">
+            How it works
+          </h3>
+        )}
+        <div className="grid grid-cols-1 gap-14 tablet:grid-cols-3 tablet:gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="relative text-center tablet:text-left">
+              <div className="hidden tablet:flex flex-col items-center tablet:items-start relative mb-6 tablet:mb-12 desktop:mb-16">
+                <div className="bg-light-cream h-[31px] w-[31px] border-2 border-dark-cyan rounded-full"></div>
+                {index < steps.length - 1 && (
+                  <div className="absolute top-1/2 left-[31px] translate-y-[-50%] h-[2px] w-[100%] bg-pale-orange"></div>
+                )}
+              </div>
+
+              <span className="block font-fraunces font-black text-[72px] leading-[72px] text-pale-orange">
+                {step.number}
+              </span>
+
+              <h4
+                className={`font-fraunces font-black text-[28px] leading-[32px] my-6 tablet:my-8 ${selectedVariant.textColors.title}`}
+              >
+                {step.title}
+              </h4>
+              <p
+                className={`text-[15px] leading-[25px] ${selectedVariant.textColors.description}`}
+              >
+                {step.description}
+              </p>
             </div>
+          ))}
+        </div>
 
-            <span className="block font-fraunces font-black text-[72px] leading-[72px] text-pale-orange">
-              {step.number}
-            </span>
-
-            <h4 className="font-fraunces font-black text-[28px] leading-[32px] text-dark-grey-blue my-6 tablet:my-8">
-              {step.title}
-            </h4>
-            <p className="text-[15px] leading-[25px] text-dark-grey-blue">
-              {step.description}
-            </p>
-          </div>
-        ))}
+        {showButton && (
+          <Button
+            href="/create-your-plan"
+            className="block mt-20 mx-auto tablet:m-0 tablet:mt-11 desktop:mt-16"
+          >
+            Create your plan
+          </Button>
+        )}
       </div>
-
-      <Button
-        href="/create-your-plan"
-        className="block mt-20 mx-auto tablet:m-0 tablet:mt-11 desktop:mt-16"
-      >
-        Create your plan
-      </Button>
     </section>
   );
 };

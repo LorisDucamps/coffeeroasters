@@ -38,7 +38,7 @@ const fraunces = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="fr" className={`${barlow.variable} ${fraunces.variable}`}>
-      <body className="antialiased font-barlow">
+      <body className="antialiased font-barlow bg-light-cream">
         <div className="max-w-[1360px] mx-auto px-6 tablet:px-10">
           <Header />
           <main>{children}</main>
